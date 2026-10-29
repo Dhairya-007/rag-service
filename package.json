@@ -1,0 +1,22 @@
+{
+  "name": "rag-service",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Dhairya Oza",
+  "type": "module",
+  "engines": { "node": ">=20.11" },
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build": "npm run build --workspace @rag/core && npm run build --workspace @rag/api",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "dev:api": "npm run dev --workspace @rag/api",
+    "dev:web": "npm run dev --workspace @rag/web"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

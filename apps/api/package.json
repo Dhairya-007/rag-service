@@ -1,0 +1,31 @@
+{
+  "name": "@rag/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.spec.json --noEmit",
+    "dev": "npm run build && node --watch dist/main.js",
+    "start": "node dist/main.js",
+    "test": "tsc -p tsconfig.spec.json && node --test dist-test/test/*.test.js"
+  },
+  "dependencies": {
+    "@dhairya-007/agent-harness": "github:Dhairya-007/agent-harness",
+    "@nestjs/common": "^12.3.2",
+    "@nestjs/core": "^12.3.2",
+    "@nestjs/platform-express": "^12.3.2",
+    "@rag/core": "*",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^12.3.2",
+    "supertest": "^7.1.4",
+    "@types/supertest": "^6.0.3"
+  }
+}
