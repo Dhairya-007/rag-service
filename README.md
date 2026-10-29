@@ -1,5 +1,11 @@
 # rag-service
 
+[![CI](https://github.com/Dhairya-007/rag-service/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Dhairya-007/rag-service/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-MIT-0E7C6B?style=flat-square)](LICENSE)
+[![NestJS](https://img.shields.io/badge/NestJS-12-E0234E?style=flat-square&logo=nestjs&logoColor=white)](apps/api)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs&logoColor=white)](apps/web)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white)](tsconfig.base.json)
+
 Ask questions over your own documents and get answers that **cite the passages they came from** — or admit the corpus does not cover it.
 
 A full-stack TypeScript monorepo: a retrieval engine with no dependencies, a NestJS API, and a Next.js front end. The answering layer is built on [agent-harness](https://github.com/Dhairya-007/agent-harness), so retrieval is a *tool the model can call repeatedly*, not a block of text stapled to the prompt.
