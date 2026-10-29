@@ -4,6 +4,10 @@ Ask questions over your own documents and get answers that **cite the passages t
 
 A full-stack TypeScript monorepo: a retrieval engine with no dependencies, a NestJS API, and a Next.js front end. The answering layer is built on [agent-harness](https://github.com/Dhairya-007/agent-harness), so retrieval is a *tool the model can call repeatedly*, not a block of text stapled to the prompt.
 
+![Indexing a document, then retrieving passages for two different questions](docs/demo.gif)
+
+<sub>Index a markdown document, then retrieve against it. The same corpus answers *"how long does a rollback take?"* from `handbook#1` under **Deployments › Rollbacks**, and *"who gets paged first?"* from `handbook#2` under **Oncall** — different passages, each labelled with the chunk id an answer would cite. This is `/search`, which runs on BM25 alone and calls no model.</sub>
+
 ```
 ┌─────────────┐   ┌──────────────────┐   ┌─────────────────────────┐
 │  Next.js    │──▶│  NestJS API      │──▶│  @rag/core              │
